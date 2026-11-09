@@ -46,7 +46,7 @@ export default defineConfig({
   cleanUrls: true,
   srcExclude: ['README.md'],
   sitemap: {
-    hostname: 'https://ota.arjunis.me',
+    hostname: 'https://docs.ota.arjunis.me',
   },
   head: [
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
@@ -61,7 +61,7 @@ export default defineConfig({
           'Signed over-the-air JavaScript updates for React Native apps on Android and iOS.',
       },
     ],
-    ['meta', { property: 'og:url', content: 'https://ota.arjunis.me/' }],
+    ['meta', { property: 'og:url', content: 'https://docs.ota.arjunis.me/' }],
   ],
   markdown: {
     lineNumbers: true,

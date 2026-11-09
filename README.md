@@ -2,7 +2,7 @@
 
 This is the documentation site for [`react-native-ota-client`](https://github.com/arjunnarangali/react-native-ota-client). It is a separate VitePress project. The site is built from the SDK README and the native setup guides.
 
-Production URL: `https://ota.arjunis.me/`
+Production URL: `https://docs.ota.arjunis.me/`
 
 ## Requirements
 
@@ -54,9 +54,9 @@ The build output is in `.vitepress/dist`.
    - Install Command: `npm install`
    - Node.js Version: 24.x
 4. Deploy.
-5. Open Project Settings, then Domains, and add `ota.arjunis.me`.
-6. Because `arjunis.me` uses Vercel DNS, Vercel should configure the domain and issue the TLS certificate automatically.
-7. Open `https://ota.arjunis.me` and confirm the site loads over HTTPS.
+5. Open Project Settings, then Domains, and add `docs.ota.arjunis.me`.
+6. Because the domain uses Vercel DNS, Vercel should configure the subdomain and issue the TLS certificate automatically.
+7. Open `https://docs.ota.arjunis.me` and confirm the site loads over HTTPS.
 
 `vercel.json` already sets the build command, output directory, clean URLs, and trailing slash behavior.
 
