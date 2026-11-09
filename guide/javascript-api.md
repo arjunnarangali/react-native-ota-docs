@@ -42,7 +42,3 @@ Call `markUpdateSuccessful()` after the first React screen has mounted. The call
 `closeAppToApplyUpdate()` only succeeds when a verified update is staged and waiting for a restart. Debug applications report OTA activation as disabled because Metro supplies the JavaScript bundle.
 
 On iOS, apps cannot terminate themselves. When `closeAppToApplyUpdate()` returns `true`, ask the user to leave and reopen the app to load the staged bundle.
-
-## Sample module
-
-The package also keeps the generated-template `multiply()` example. It is not part of the OTA API.

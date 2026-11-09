@@ -101,6 +101,6 @@ OTA download URLs must also match the configured server origin.
 
 ## Autolinking
 
-The SDK autolinks a single `OtaSdkPackage` that contains the sample `OtaSdk` TurboModule and the OTA `OTAUpdates` TurboModule. Do not add another manual package registration in the host app.
+The SDK autolinks a single `OtaSdkPackage` that registers the `OTAUpdates` TurboModule. Do not add another manual package registration in the host app.
 
 For the native startup API, see [Native startup API](/guide/native-startup).

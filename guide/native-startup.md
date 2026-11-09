@@ -32,6 +32,6 @@ The host app uses the native startup API to configure the SDK, select a bundle b
 
 ## Autolinking
 
-The SDK autolinks one `OtaSdkPackage` that contains the sample `OtaSdk` TurboModule and the OTA `OTAUpdates` TurboModule. Do not register another package manually.
+The SDK autolinks one `OtaSdkPackage` that registers the `OTAUpdates` TurboModule. Do not register another package manually.
 
 The JavaScript API calls the same native implementation. See [JavaScript API](/guide/javascript-api).

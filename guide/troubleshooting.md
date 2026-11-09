@@ -47,7 +47,7 @@ Set `react.debuggableVariants` for every flavor's debug variants, such as `devel
 
 ## Autolinking fails
 
-Rebuild the native app after installing the package. Run `pod install` in the iOS project. Do not register another `OtaSdkPackage` manually. The SDK autolinks one package that contains both TurboModules.
+Rebuild the native app after installing the package. Run `pod install` in the iOS project. Do not register another `OtaSdkPackage` manually. The SDK autolinks one package that registers the `OTAUpdates` TurboModule.
 
 ## Get help
 
