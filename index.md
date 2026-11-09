@@ -1,70 +1,73 @@
 ---
 layout: home
+pageClass: ota-home
 
 hero:
-  name: React Native OTA
-  text: Signed over-the-air updates for React Native
-  tagline: Update JavaScript and bundled assets on Android and iOS without shipping a new binary. The client verifies each release before it runs, and the self-hosted server controls rollout and rollback.
+  text: Ship JavaScript without shipping a new binary.
+  tagline: Signed React Native releases, verified on device before activation and rolled back when they fail health checks.
+  image:
+    src: /release-gate.svg
+    alt: A signed release manifest passes verification before staging and activation.
   actions:
     - theme: brand
-      text: Get started
-      link: /guide/introduction
+      text: Install the client
+      link: /guide/installation
     - theme: alt
-      text: Server guide
-      link: /server/
-    - theme: alt
-      text: npm package
-      link: https://www.npmjs.com/package/react-native-ota-client
-    - theme: alt
-      text: GitHub
-      link: https://github.com/arjunnarangali/react-native-ota-client
-
-features:
-  - title: Signed releases
-    details: The client checks the release manifest signature, the artifact hash, and the hash of each extracted file before it stages an update.
-  - title: Safe activation
-    details: A staged release stays provisional until the app confirms it is healthy. If it does not, the client restores the previous bundle or the embedded bundle.
-  - title: Android and iOS
-    details: One JavaScript API and one native startup contract for both platforms, built for React Native 0.88 with the New Architecture and Hermes.
-  - title: Runtime aware
-    details: Bundles are tied to the app, runtime version, and channel. A native runtime change invalidates bundles built for the old runtime.
-  - title: HTTPS by default
-    details: Release downloads must use HTTPS and match the configured server origin. Local HTTP is limited to loopback development hosts.
-  - title: Public key only
-    details: The app ships a public verification key. The publisher private key never enters the app or the SDK.
-  - title: Self-hosted server
-    details: Run the companion FastAPI service with PostgreSQL, signed release storage, rollout control, and rollback.
+      text: Run the server
+      link: /server/local-setup
 ---
 
-## What OTA can update
+<section class="ota-scope" aria-labelledby="ota-scope-title">
+  <div class="ota-section-intro">
+    <p class="ota-section-label">Update boundary</p>
+    <h2 id="ota-scope-title">Update JavaScript over the air. Ship native changes in a new binary.</h2>
+    <p>Every release is tied to the native runtime that built it. The client rejects bundles that do not match the installed app.</p>
+  </div>
 
-OTA updates JavaScript and bundled assets. Native code, permissions and entitlements, React Native and Hermes versions, and Codegen contract changes require a new APK or IPA.
+  <div class="ota-scope-grid">
+    <article class="ota-scope-lane ota-scope-lane--updates">
+      <p class="ota-scope-state">Over the air</p>
+      <h3>JavaScript and bundled assets</h3>
+      <p>Publish JavaScript and Metro assets for an app, runtime version, and channel already installed on the device.</p>
+    </article>
+    <article class="ota-scope-lane ota-scope-lane--binary">
+      <p class="ota-scope-state">New binary</p>
+      <h3>Changes to the native runtime</h3>
+      <p>Native code, permissions, entitlements, React Native or Hermes versions, and Codegen contracts ship in a new APK or IPA.</p>
+    </article>
+  </div>
+</section>
 
-## How it works
+<section class="ota-paths" aria-labelledby="ota-paths-title">
+  <div class="ota-section-intro">
+    <h2 id="ota-paths-title">Choose a path</h2>
+  </div>
 
-1. The app checks the OTA server with its app ID, runtime version, channel, current version, installation ID, and last failed release ID when one exists.
-2. The client verifies the signed release manifest, the artifact size and hash, the archive contents, and the Hermes entrypoint.
-3. A verified release is staged under app-private storage.
-4. On the next cold start, the client selects the staged bundle. The release stays provisional until `markUpdateSuccessful()` confirms it is healthy. An unconfirmed release rolls back to the previous bundle or the embedded bundle.
+  <div class="ota-path-list">
+    <a class="ota-path" href="/guide/installation">
+      <span class="ota-path-title">Install the client</span>
+      <span class="ota-path-description">Add the native SDK to an Android and iOS app.</span>
+      <span class="ota-path-action">Open installation guide</span>
+    </a>
+    <a class="ota-path" href="/server/local-setup">
+      <span class="ota-path-title">Run the server</span>
+      <span class="ota-path-description">Set up the API, database, release storage, and publishing tools.</span>
+      <span class="ota-path-action">Open local setup</span>
+    </a>
+    <a class="ota-path" href="/server/api">
+      <span class="ota-path-title">Read the API contract</span>
+      <span class="ota-path-description">Review check, publish, rollout, and rollback requests.</span>
+      <span class="ota-path-action">Open API reference</span>
+    </a>
+  </div>
+</section>
 
-## Requirements
-
-- Android and iOS.
-- React Native 0.88.x, the New Architecture, and Hermes.
-- Android min SDK 24.
-- iOS New Architecture and Hermes. Use the deployment target supported by the host app's React Native version.
-- A host app with release signing and a public verification key.
-
-## Install
-
-```sh
-npm install react-native-ota-client
-```
-
-React Native autolinking finds the native package on Android and iOS. Rebuild the native app after installation. Metro alone cannot add native code.
-
-## Server
-
-The companion server issues signed manifests and serves release artifacts. See the [server guide](/server/) for local setup, release publishing, production deployment, and the [API reference](/server/api).
-
-Next: [installation guide](/guide/installation), platform setup for [Android](/guide/android) and [iOS](/guide/ios), and the [server guide](/server/).
+<section class="ota-install" aria-labelledby="ota-install-title">
+  <div>
+    <p class="ota-section-label">Quick install</p>
+    <h2 id="ota-install-title">Add the client package</h2>
+    <p>Autolinking discovers the native modules. Rebuild the app after installation; Metro alone cannot add native code.</p>
+    <a href="/guide/installation">Read the full installation guide</a>
+  </div>
+  <pre class="ota-install-command"><code>npm install react-native-ota-client</code></pre>
+</section>

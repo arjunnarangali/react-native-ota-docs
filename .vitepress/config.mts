@@ -50,8 +50,9 @@ export default defineConfig({
   },
   head: [
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
-    ['meta', { name: 'theme-color', content: '#0f172a' }],
+    ['meta', { name: 'theme-color', content: '#0b1220' }],
     ['meta', { property: 'og:type', content: 'website' }],
+    ['meta', { property: 'og:site_name', content: 'React Native OTA' }],
     ['meta', { property: 'og:title', content: 'React Native OTA' }],
     [
       'meta',
@@ -62,9 +63,37 @@ export default defineConfig({
       },
     ],
     ['meta', { property: 'og:url', content: 'https://docs.ota.arjunis.me/' }],
+    ['meta', { property: 'og:image', content: 'https://docs.ota.arjunis.me/og-image.png' }],
+    ['meta', { property: 'og:image:width', content: '1200' }],
+    ['meta', { property: 'og:image:height', content: '630' }],
+    [
+      'meta',
+      {
+        property: 'og:image:alt',
+        content: 'Signed React Native releases, verified on device before activation.',
+      },
+    ],
+    ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
+    ['meta', { name: 'twitter:title', content: 'React Native OTA' }],
+    [
+      'meta',
+      {
+        name: 'twitter:description',
+        content:
+          'Signed React Native releases, verified on device before activation and rolled back when they fail health checks.',
+      },
+    ],
+    ['meta', { name: 'twitter:image', content: 'https://docs.ota.arjunis.me/og-image.png' }],
+    [
+      'meta',
+      {
+        name: 'twitter:image:alt',
+        content: 'Signed React Native releases, verified on device before activation.',
+      },
+    ],
   ],
   markdown: {
-    lineNumbers: true,
+    lineNumbers: false,
     config: (md) => {
       tableDataLabels(md)
     },
@@ -75,23 +104,6 @@ export default defineConfig({
       { text: 'Guide', link: '/guide/introduction' },
       { text: 'Server', link: '/server/' },
       { text: 'API', link: '/server/api' },
-      {
-        text: 'Links',
-        items: [
-          {
-            text: 'npm package',
-            link: 'https://www.npmjs.com/package/react-native-ota-client',
-          },
-          {
-            text: 'Client repository',
-            link: 'https://github.com/arjunnarangali/react-native-ota-client',
-          },
-          {
-            text: 'Server repository',
-            link: 'https://github.com/arjunnarangali/react-native-ota-server',
-          },
-        ],
-      },
     ],
     sidebar: {
       '/guide/': [

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 440" role="img" aria-labelledby="title desc">
+  <title id="title">Release verification gate</title>
+  <desc id="desc">A signed React Native release manifest is verified, staged, and confirmed after a healthy launch.</desc>
+  <rect x="12" y="12" width="576" height="416" rx="20" fill="#0b1220" stroke="#2a3950" stroke-width="2"/>
+  <text x="42" y="55" fill="#a8b4c7" font-family="IBM Plex Mono, monospace" font-size="14">Signed release</text>
+  <rect x="438" y="32" width="116" height="32" rx="16" fill="#123d34"/>
+  <circle cx="456" cy="48" r="5" fill="#55d6a0"/>
+  <text x="469" y="53" fill="#8ce4bd" font-family="IBM Plex Mono, monospace" font-size="12">Verified</text>
+  <path d="M42 78h516" stroke="#2a3950"/>
+  <text x="42" y="111" fill="#7d8ba2" font-family="IBM Plex Mono, monospace" font-size="11">App ID</text>
+  <text x="42" y="137" fill="#e7eef8" font-family="IBM Plex Mono, monospace" font-size="16">com.example.mobile</text>
+  <text x="320" y="111" fill="#7d8ba2" font-family="IBM Plex Mono, monospace" font-size="11">Channel / version</text>
+  <text x="320" y="137" fill="#e7eef8" font-family="IBM Plex Mono, monospace" font-size="16">production / 18</text>
+  <text x="42" y="172" fill="#7d8ba2" font-family="IBM Plex Mono, monospace" font-size="11">Runtime</text>
+  <text x="42" y="198" fill="#e7eef8" font-family="IBM Plex Mono, monospace" font-size="16">rn-0.88-android-v1</text>
+  <text x="320" y="172" fill="#7d8ba2" font-family="IBM Plex Mono, monospace" font-size="11">Artifact SHA-256</text>
+  <text x="320" y="198" fill="#e7eef8" font-family="IBM Plex Mono, monospace" font-size="16">9f4a…c82d</text>
+  <path d="M42 222h516" stroke="#2a3950"/>
+  <text x="42" y="251" fill="#a8b4c7" font-family="IBM Plex Sans, sans-serif" font-size="13">The device checks the signature and artifact before activation.</text>
+  <path d="M83 320h430" stroke="#40506a" stroke-width="3" stroke-linecap="round"/>
+  <path d="m188 314 8 6-8 6m105-12 8 6-8 6m105-12 8 6-8 6" fill="none" stroke="#7d8ba2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="83" cy="320" r="11" fill="#4059b8" stroke="#b7c3ff" stroke-width="2"/>
+  <circle cx="225" cy="320" r="11" fill="#4059b8" stroke="#b7c3ff" stroke-width="2"/>
+  <circle cx="367" cy="320" r="11" fill="#925a00" stroke="#f3bd68" stroke-width="2"/>
+  <circle cx="513" cy="320" r="11" fill="#167a54" stroke="#55d6a0" stroke-width="2"/>
+  <text x="83" y="357" text-anchor="middle" fill="#c5d0df" font-family="IBM Plex Sans, sans-serif" font-size="14">Check</text>
+  <text x="225" y="357" text-anchor="middle" fill="#c5d0df" font-family="IBM Plex Sans, sans-serif" font-size="14">Verify</text>
+  <text x="367" y="357" text-anchor="middle" fill="#f3bd68" font-family="IBM Plex Sans, sans-serif" font-size="14">Stage</text>
+  <text x="513" y="357" text-anchor="middle" fill="#8ce4bd" font-family="IBM Plex Sans, sans-serif" font-size="14">Confirm</text>
+  <text x="300" y="397" text-anchor="middle" fill="#7d8ba2" font-family="IBM Plex Sans, sans-serif" font-size="13">Unhealthy releases return to the previous confirmed bundle.</text>
+</svg>

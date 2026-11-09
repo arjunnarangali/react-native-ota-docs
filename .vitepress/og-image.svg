@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">React Native OTA</title>
+  <desc id="desc">Signed React Native releases, verified on device before activation.</desc>
+  <rect width="1200" height="630" fill="#0b1220"/>
+  <path d="M0 520h1200" stroke="#24334a"/>
+  <g transform="translate(72 72)">
+    <rect width="56" height="56" rx="13" fill="#131c2e" stroke="#40506a"/>
+    <path d="M10 28h12" fill="none" stroke="#a8b1ff" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="34" cy="28" r="15" fill="none" stroke="#a8b1ff" stroke-width="3"/>
+    <path d="m27 28 5 5 9-10" fill="none" stroke="#34d399" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="74" y="24" fill="#c5d0df" font-family="IBM Plex Sans, sans-serif" font-size="19" font-weight="600">React Native OTA</text>
+    <text x="74" y="48" fill="#7d8ba2" font-family="IBM Plex Mono, monospace" font-size="12">Signed releases / self-hosted server</text>
+  </g>
+  <text x="72" y="255" fill="#e7eef8" font-family="IBM Plex Sans, sans-serif" font-size="52" font-weight="600" letter-spacing="-1.8">Update JavaScript.</text>
+  <text x="72" y="318" fill="#e7eef8" font-family="IBM Plex Sans, sans-serif" font-size="52" font-weight="600" letter-spacing="-1.8">Keep the native binary.</text>
+  <text x="74" y="382" fill="#a8b4c7" font-family="IBM Plex Sans, sans-serif" font-size="22">Signed React Native releases, verified on device before activation.</text>
+  <text x="74" y="424" fill="#a8b4c7" font-family="IBM Plex Sans, sans-serif" font-size="22">Failed health checks restore the previous confirmed bundle.</text>
+  <g transform="translate(742 90)">
+    <rect width="390" height="350" rx="18" fill="#131c2e" stroke="#2a3950" stroke-width="2"/>
+    <text x="28" y="42" fill="#a8b4c7" font-family="IBM Plex Mono, monospace" font-size="12">Release manifest</text>
+    <rect x="255" y="22" width="108" height="30" rx="15" fill="#123d34"/>
+    <circle cx="272" cy="37" r="4" fill="#55d6a0"/>
+    <text x="284" y="41" fill="#8ce4bd" font-family="IBM Plex Mono, monospace" font-size="10">Verified</text>
+    <path d="M28 66h334" stroke="#2a3950"/>
+    <text x="28" y="101" fill="#7d8ba2" font-family="IBM Plex Mono, monospace" font-size="10">App / channel</text>
+    <text x="28" y="125" fill="#e7eef8" font-family="IBM Plex Mono, monospace" font-size="14">com.example / production</text>
+    <text x="28" y="164" fill="#7d8ba2" font-family="IBM Plex Mono, monospace" font-size="10">Runtime</text>
+    <text x="28" y="188" fill="#e7eef8" font-family="IBM Plex Mono, monospace" font-size="14">rn-0.88-android-v1</text>
+    <text x="28" y="227" fill="#7d8ba2" font-family="IBM Plex Mono, monospace" font-size="10">Artifact SHA-256</text>
+    <text x="28" y="251" fill="#e7eef8" font-family="IBM Plex Mono, monospace" font-size="14">9f4a…c82d</text>
+    <path d="M28 272h334" stroke="#2a3950"/>
+    <circle cx="52" cy="307" r="6" fill="#a8b1ff"/>
+    <path d="M58 307h68m12 0h68m12 0h68" stroke="#40506a" stroke-width="2"/>
+    <circle cx="138" cy="307" r="6" fill="#a8b1ff"/>
+    <circle cx="218" cy="307" r="6" fill="#f3bd68"/>
+    <circle cx="298" cy="307" r="6" fill="#55d6a0"/>
+    <text x="52" y="333" text-anchor="middle" fill="#a8b4c7" font-family="IBM Plex Sans, sans-serif" font-size="10">check</text>
+    <text x="138" y="333" text-anchor="middle" fill="#a8b4c7" font-family="IBM Plex Sans, sans-serif" font-size="10">verify</text>
+    <text x="218" y="333" text-anchor="middle" fill="#a8b4c7" font-family="IBM Plex Sans, sans-serif" font-size="10">stage</text>
+    <text x="298" y="333" text-anchor="middle" fill="#a8b4c7" font-family="IBM Plex Sans, sans-serif" font-size="10">confirm</text>
+  </g>
+  <text x="72" y="576" fill="#7d8ba2" font-family="IBM Plex Mono, monospace" font-size="14">docs.ota.arjunis.me</text>
+  <text x="1128" y="576" text-anchor="end" fill="#7d8ba2" font-family="IBM Plex Mono, monospace" font-size="14">Android / iOS</text>
+</svg>

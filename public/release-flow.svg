@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 450" role="img" aria-labelledby="title desc">
+  <title id="title">OTA release lifecycle</title>
+  <desc id="desc">The client checks compatibility, verifies the signed manifest and hashes, stages the bundle, and confirms it after a healthy launch or rolls back.</desc>
+  <rect x="1" y="1" width="718" height="448" rx="16" fill="#0b1220" stroke="#2a3950" stroke-width="2"/>
+  <text x="32" y="42" fill="#a8b4c7" font-family="IBM Plex Mono, monospace" font-size="13">Device activation</text>
+  <path d="M57 83v260" stroke="#40506a" stroke-width="3" stroke-linecap="round"/>
+  <g font-family="IBM Plex Sans, sans-serif">
+    <circle cx="57" cy="91" r="17" fill="#21365f" stroke="#a8b1ff" stroke-width="2"/>
+    <text x="57" y="97" text-anchor="middle" fill="#d8deff" font-size="15">1</text>
+    <text x="91" y="88" fill="#e7eef8" font-size="17" font-weight="600">Check compatibility</text>
+    <text x="91" y="112" fill="#a8b4c7" font-size="14">App ID, runtime version, and channel must match.</text>
+
+    <circle cx="57" cy="160" r="17" fill="#21365f" stroke="#a8b1ff" stroke-width="2"/>
+    <text x="57" y="166" text-anchor="middle" fill="#d8deff" font-size="15">2</text>
+    <text x="91" y="157" fill="#e7eef8" font-size="17" font-weight="600">Verify the release</text>
+    <text x="91" y="181" fill="#a8b4c7" font-size="14">Check the signature, artifact hash, files, and Hermes entrypoint.</text>
+
+    <circle cx="57" cy="229" r="17" fill="#493411" stroke="#f3bd68" stroke-width="2"/>
+    <text x="57" y="235" text-anchor="middle" fill="#ffe2ae" font-size="15">3</text>
+    <text x="91" y="226" fill="#e7eef8" font-size="17" font-weight="600">Stage the bundle</text>
+    <text x="91" y="250" fill="#a8b4c7" font-size="14">Keep the verified release in app-private storage.</text>
+
+    <circle cx="57" cy="298" r="17" fill="#21365f" stroke="#a8b1ff" stroke-width="2"/>
+    <text x="57" y="304" text-anchor="middle" fill="#d8deff" font-size="15">4</text>
+    <text x="91" y="295" fill="#e7eef8" font-size="17" font-weight="600">Try it on cold start</text>
+    <text x="91" y="319" fill="#a8b4c7" font-size="14">The new bundle stays provisional until the app confirms health.</text>
+  </g>
+  <path d="M91 357h598" stroke="#2a3950"/>
+  <rect x="91" y="378" width="260" height="42" rx="8" fill="#123d34"/>
+  <circle cx="110" cy="399" r="5" fill="#55d6a0"/>
+  <text x="126" y="404" fill="#b7f1d6" font-family="IBM Plex Sans, sans-serif" font-size="14" font-weight="600">Healthy: confirm the release</text>
+  <rect x="369" y="378" width="320" height="42" rx="8" fill="#3c2029"/>
+  <circle cx="388" cy="399" r="5" fill="#ef6674"/>
+  <text x="404" y="404" fill="#ffb2b9" font-family="IBM Plex Sans, sans-serif" font-size="14" font-weight="600">Unhealthy: restore the prior bundle</text>
+</svg>

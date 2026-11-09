@@ -6,6 +6,14 @@ The service distributes signed JavaScript and bundled assets only. It does not u
 
 The API contract is available at `/openapi.json` and `/docs`.
 
+The service source is maintained in the [`react-native-ota-server` repository](https://github.com/arjunnarangali/react-native-ota-server).
+
+## Service topology
+
+The publisher signs releases outside the API host. The server receives the signed package and public verification key, then serves compatible releases to installed apps.
+
+<img class="ota-diagram" src="/server-topology.svg" alt="Publisher tools send signed releases to the FastAPI server. The React Native app checks and downloads releases from the server, then verifies them with its embedded public key." />
+
 ## What it provides
 
 - A check endpoint for app ID, runtime version, channel, current version, installation ID, and failed release ID.

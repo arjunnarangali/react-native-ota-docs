@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 470" role="img" aria-labelledby="title desc">
+  <title id="title">OTA service trust boundaries</title>
+  <desc id="desc">Publisher tools sign and upload releases to the FastAPI server. The app checks and downloads releases, then verifies them with its embedded public key. The private key remains with the publisher.</desc>
+  <rect x="1" y="1" width="718" height="468" rx="16" fill="#0b1220" stroke="#2a3950" stroke-width="2"/>
+  <text x="28" y="42" fill="#a8b4c7" font-family="IBM Plex Mono, monospace" font-size="13">Release trust boundaries</text>
+  <g font-family="IBM Plex Sans, sans-serif">
+    <rect x="20" y="86" width="200" height="250" rx="12" fill="#101a2b" stroke="#40506a" stroke-width="2"/>
+    <text x="40" y="122" fill="#e7eef8" font-size="19" font-weight="600">Publisher</text>
+    <text x="40" y="155" fill="#a8b4c7" font-size="14">Build and sign tools</text>
+    <path d="M40 173h160" stroke="#2a3950"/>
+    <rect x="40" y="194" width="160" height="78" rx="8" fill="#3d2d14" stroke="#925a00"/>
+    <text x="54" y="222" fill="#f3bd68" font-size="14" font-weight="600">Private key</text>
+    <text x="54" y="246" fill="#e6c991" font-size="13">Signs each release</text>
+    <text x="40" y="305" fill="#a8b4c7" font-size="13">Trusted environment</text>
+
+    <rect x="260" y="86" width="200" height="250" rx="12" fill="#101a2b" stroke="#40506a" stroke-width="2"/>
+    <text x="280" y="122" fill="#e7eef8" font-size="19" font-weight="600">OTA server</text>
+    <text x="280" y="155" fill="#a8b4c7" font-size="14">FastAPI over HTTPS</text>
+    <path d="M280 173h160" stroke="#2a3950"/>
+    <text x="280" y="205" fill="#a8b4c7" font-size="13">Public verification key</text>
+    <text x="280" y="233" fill="#a8b4c7" font-size="13">PostgreSQL metadata</text>
+    <text x="280" y="261" fill="#a8b4c7" font-size="13">Artifact volume</text>
+    <text x="280" y="305" fill="#8ce4bd" font-size="13">Verifies before publish</text>
+
+    <rect x="500" y="86" width="200" height="250" rx="12" fill="#101a2b" stroke="#40506a" stroke-width="2"/>
+    <text x="520" y="122" fill="#e7eef8" font-size="19" font-weight="600">React Native app</text>
+    <text x="520" y="155" fill="#a8b4c7" font-size="14">OTA client on device</text>
+    <path d="M520 173h160" stroke="#2a3950"/>
+    <text x="520" y="205" fill="#a8b4c7" font-size="13">Embedded public key</text>
+    <text x="520" y="233" fill="#a8b4c7" font-size="13">Checks runtime/channel</text>
+    <text x="520" y="261" fill="#a8b4c7" font-size="13">Verifies before activation</text>
+    <text x="520" y="305" fill="#8ce4bd" font-size="13">Rolls back if unhealthy</text>
+  </g>
+  <path d="M220 200h40" stroke="#a8b1ff" stroke-width="2"/>
+  <path d="m250 194 10 6-10 6" fill="none" stroke="#a8b1ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M460 215h40" stroke="#55d6a0" stroke-width="2"/>
+  <path d="m490 209 10 6-10 6" fill="none" stroke="#55d6a0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M500 250h-40" stroke="#55d6a0" stroke-width="2"/>
+  <path d="m470 244-10 6 10 6" fill="none" stroke="#55d6a0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M20 365h680" stroke="#2a3950"/>
+  <circle cx="40" cy="395" r="5" fill="#a8b1ff"/>
+  <text x="55" y="400" fill="#c5d0df" font-family="IBM Plex Sans, sans-serif" font-size="14">Signed release upload</text>
+  <circle cx="285" cy="395" r="5" fill="#55d6a0"/>
+  <text x="300" y="400" fill="#c5d0df" font-family="IBM Plex Sans, sans-serif" font-size="14">Check request and signed download</text>
+  <circle cx="40" cy="432" r="5" fill="#f3bd68"/>
+  <text x="55" y="437" fill="#c5d0df" font-family="IBM Plex Sans, sans-serif" font-size="14">The private key stays outside the server and app.</text>
+</svg>

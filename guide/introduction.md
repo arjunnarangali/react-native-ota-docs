@@ -22,6 +22,8 @@ OTA cannot update native code, permissions or entitlements, React Native or Herm
 
 ## How updates work
 
+<img class="ota-diagram" src="/release-flow.svg" alt="The app checks for a compatible release, verifies its signature and hashes, stages the bundle, then confirms it or rolls back after a failed health check." />
+
 1. The app sends a check request to the OTA server. The request includes the app ID, runtime version, channel, current version, installation ID, and the last failed release ID when one exists.
 2. The client verifies the signed release manifest. It checks the signature with the configured public key and enforces the platform, app, runtime, channel, version, action, and download origin rules.
 3. The client downloads the artifact, verifies its size and SHA-256 hash, extracts it into app-private storage, and checks each declared file and the Hermes entrypoint.
