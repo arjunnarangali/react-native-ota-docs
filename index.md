@@ -2,13 +2,16 @@
 layout: home
 
 hero:
-  name: React Native OTA Client
+  name: React Native OTA
   text: Signed over-the-air updates for React Native
-  tagline: Update JavaScript and bundled assets on Android and iOS without shipping a new binary. The client verifies each release before it runs.
+  tagline: Update JavaScript and bundled assets on Android and iOS without shipping a new binary. The client verifies each release before it runs, and the self-hosted server controls rollout and rollback.
   actions:
     - theme: brand
       text: Get started
       link: /guide/introduction
+    - theme: alt
+      text: Server guide
+      link: /server/
     - theme: alt
       text: npm package
       link: https://www.npmjs.com/package/react-native-ota-client
@@ -29,6 +32,8 @@ features:
     details: Release downloads must use HTTPS and match the configured server origin. Local HTTP is limited to loopback development hosts.
   - title: Public key only
     details: The app ships a public verification key. The publisher private key never enters the app or the SDK.
+  - title: Self-hosted server
+    details: Run the companion FastAPI service with PostgreSQL, signed release storage, rollout control, and rollback.
 ---
 
 ## What OTA can update
@@ -58,4 +63,8 @@ npm install react-native-ota-client
 
 React Native autolinking finds the native package on Android and iOS. Rebuild the native app after installation. Metro alone cannot add native code.
 
-Next: [installation guide](/guide/installation) and platform setup for [Android](/guide/android) and [iOS](/guide/ios).
+## Server
+
+The companion server issues signed manifests and serves release artifacts. See the [server guide](/server/) for local setup, release publishing, production deployment, and the [API reference](/server/api).
+
+Next: [installation guide](/guide/installation), platform setup for [Android](/guide/android) and [iOS](/guide/ios), and the [server guide](/server/).

@@ -1,6 +1,6 @@
-# React Native OTA Client documentation
+# React Native OTA documentation
 
-This is the documentation site for [`react-native-ota-client`](https://github.com/arjunnarangali/react-native-ota-client). It is a separate VitePress project. The site is built from the SDK README and the native setup guides.
+This is the documentation site for [`react-native-ota-client`](https://github.com/arjunnarangali/react-native-ota-client) and [`react-native-ota-server`](https://github.com/arjunnarangali/react-native-ota-server). It is a separate VitePress project. The site is built from the SDK README, the native setup guides, and the server repository.
 
 Production URL: `https://docs.ota.arjunis.me/`
 
@@ -39,7 +39,7 @@ The build output is in `.vitepress/dist`.
 | `guide/ios.md` | iOS host setup |
 | `guide/native-startup.md` | Native startup API |
 | `guide/troubleshooting.md` | Common failures |
-| `server.md` | Server contract and links |
+| `server/` | Server setup, configuration, releases, tools, operations, deployment, API, and troubleshooting |
 | `.vitepress/config.mts` | Site title, navigation, sidebar, search, sitemap |
 | `public/` | Static files copied to the build output |
 
@@ -66,4 +66,4 @@ The build output is in `.vitepress/dist`.
 - Use sentence case for headings.
 - Use straight quotes.
 - Do not add private keys, tokens, or credentials.
-- Update the SDK README and the matching documentation page when setup steps change.
+- Update the matching documentation page and repository README when setup steps change.

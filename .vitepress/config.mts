@@ -40,9 +40,9 @@ function tableDataLabels(md: any) {
 }
 
 export default defineConfig({
-  title: 'React Native OTA Client',
+  title: 'React Native OTA',
   description:
-    'Signed over-the-air JavaScript updates for React Native apps on Android and iOS.',
+    'Signed over-the-air updates for React Native apps on Android and iOS, with a self-hosted release server.',
   cleanUrls: true,
   srcExclude: ['README.md'],
   sitemap: {
@@ -52,13 +52,13 @@ export default defineConfig({
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
     ['meta', { name: 'theme-color', content: '#0f172a' }],
     ['meta', { property: 'og:type', content: 'website' }],
-    ['meta', { property: 'og:title', content: 'React Native OTA Client' }],
+    ['meta', { property: 'og:title', content: 'React Native OTA' }],
     [
       'meta',
       {
         property: 'og:description',
         content:
-          'Signed over-the-air JavaScript updates for React Native apps on Android and iOS.',
+          'Signed over-the-air updates for React Native apps on Android and iOS, with a self-hosted release server.',
       },
     ],
     ['meta', { property: 'og:url', content: 'https://docs.ota.arjunis.me/' }],
@@ -73,7 +73,8 @@ export default defineConfig({
     logo: '/favicon.svg',
     nav: [
       { text: 'Guide', link: '/guide/introduction' },
-      { text: 'Server', link: '/server' },
+      { text: 'Server', link: '/server/' },
+      { text: 'API', link: '/server/api' },
       {
         text: 'Links',
         items: [
@@ -107,10 +108,20 @@ export default defineConfig({
           ],
         },
       ],
-      '/': [
+      '/server/': [
         {
-          text: 'Project',
-          items: [{ text: 'Server contract', link: '/server' }],
+          text: 'Server',
+          items: [
+            { text: 'Overview', link: '/server/' },
+            { text: 'Local setup', link: '/server/local-setup' },
+            { text: 'Configuration', link: '/server/configuration' },
+            { text: 'Release workflow', link: '/server/releases' },
+            { text: 'Tools reference', link: '/server/tools' },
+            { text: 'Operations', link: '/server/operations' },
+            { text: 'Production deployment', link: '/server/deployment' },
+            { text: 'API reference', link: '/server/api' },
+            { text: 'Troubleshooting', link: '/server/troubleshooting' },
+          ],
         },
       ],
     },
